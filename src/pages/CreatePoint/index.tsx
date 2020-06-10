@@ -4,27 +4,12 @@ import { FiArrowLeft } from 'react-icons/fi';
 import { Map, TileLayer, Marker } from 'react-leaflet';
 import { LeafletMouseEvent } from 'leaflet';
 import axios from 'axios';
-
 import api from 'services/api';
-
-import Dropzone from 'components/Dropzone';
-
-import './styles.css';
+import Item from 'types/Item';
+import { IBGECityResponse, IBGEUFResponse } from 'types/IBGE';
 import logo from 'assets/logo.svg';
-
-interface Item {
-  id: number;
-  title: string;
-  image_url: string;
-}
-
-interface IBGEUFResponse {
-  sigla: string
-}
-
-interface IBGECityResponse {
-  nome: string
-}
+import Dropzone from 'components/Dropzone';
+import './styles.css';
 
 const CreatePoint = () => {
   const [items, setItems] = useState<Item[]>([]);
