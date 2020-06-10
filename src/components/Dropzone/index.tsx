@@ -1,7 +1,6 @@
 import React, { useState, useCallback, FunctionComponent } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { FiUpload } from 'react-icons/fi';
-
 import './styles.css';
 
 interface Props {
